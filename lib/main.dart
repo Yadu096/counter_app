@@ -7,12 +7,17 @@ import 'providers/auth_provider.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  
+
   final authService = AuthService();
   await authService.init();
-  
-  runApp(const ProviderScope(child: MyApp()));
+
+  runApp(
+    const ProviderScope(
+      child: MyApp(),
+    ),
+  );
 }
+
 
 class MyApp extends ConsumerWidget {
   const MyApp({Key? key}) : super(key: key);
